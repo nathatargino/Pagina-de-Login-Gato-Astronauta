@@ -153,6 +153,9 @@ body * {
 
 @media screen and (min-width: 2560px) {
     .left-login-image {
-        width: 26vw;
+        width: 28vw;
     }
+    .left-login > h1 {
+        font-size: 2vw;
+    } 
 }
