@@ -73,6 +73,7 @@ body * {
 }
 
 .text-field {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -93,6 +94,7 @@ body * {
     box-shadow: 0px 10px 40px #00000056;
     outline: none;
     box-sizing: border-box;
+    padding-right: 38px;
 }
 
 .text-field > label {
@@ -103,6 +105,15 @@ body * {
 
 .text-field > input::placeholder {
     color: #f0ffff94;
+}
+
+#password-visivel {
+    display: flex;
+    position: absolute;
+    right: 6px;
+    top: 52%;
+    color: #cfcfcf;
+    cursor: pointer;
 }
 
 .btn-login {
@@ -120,6 +131,23 @@ body * {
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px #00ff8052 ;
 
+}
+
+.text-singup {
+        justify-content: center;
+        text-align: center;
+        color: #f0ffffde;
+        
+    }
+
+.text-singup > a {
+    color: var(--cor4);
+    text-decoration: none;
+}
+
+.text-singup > a:hover{
+    text-shadow: 0.3px 0.2px 1.5px #77ffc0;
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 950px){
@@ -159,4 +187,7 @@ body * {
     .left-login > h1 {
         font-size: 2vw;
     } 
+    .right-login p {
+        font-size: 14pt; 
+    };
 }
