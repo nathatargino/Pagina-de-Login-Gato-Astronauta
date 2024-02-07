@@ -134,6 +134,15 @@ body * {
 
 }
 
+.btn-login > a {
+    text-decoration: none;
+    color: #2b134b;
+}
+
+.btn-login:hover{
+    box-shadow: 2px 2px 40px #00ff8052;
+}
+
 .text-singup {
         justify-content: center;
         text-align: center;
@@ -151,6 +160,42 @@ body * {
     text-decoration: underline;
 }
 
+.error404 {
+    margin: 0;
+    padding: 0;
+}
+
+.error-img{
+    display: block;
+    width: 100vw;
+    margin: auto;
+    height: 75vh;
+}
+
+
+.error-text {
+    text-align: center;
+    font-family:'Noto Sans', sans-serif;
+    color: var(--cor2);
+}
+
+footer {
+    background-color: var(--cor1);
+    text-align: center;
+    color: var(--cor2);
+    
+}
+
+footer > p > a {
+    color: var(--cor4);
+    text-decoration: none;
+}
+
+footer > p > a:hover {
+    text-shadow: 0.3px 0.2px 1.5px #77ffc0;
+    text-decoration: underline;
+}
+
 @media only screen and (max-width: 950px){
     .card-login{
         width: 85%;
@@ -158,6 +203,9 @@ body * {
 }
 
 @media only screen and (max-width: 600px){
+    .error-img{
+        width: 60vw;
+    }
     .main-login{
         flex-direction: column;
     }
@@ -182,6 +230,10 @@ body * {
 }
 
 @media screen and (min-width: 2560px) {
+    .error-img{
+        width: 100vw;
+        height: 82vh;
+    }
     .left-login-image {
         width: 28vw;
     }
@@ -190,5 +242,6 @@ body * {
     } 
     .right-login p {
         font-size: 14pt; 
-    };
+    }
+
 }
