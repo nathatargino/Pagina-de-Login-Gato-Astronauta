@@ -9,3 +9,6 @@ function mostrarSenha(element) {
     element.textContent = 'visibility_off';
   }
 }
+function alerta(element) {
+  alert('Olá, obrigado por visitar meu projeto , veja mais projetos como esse em https://github.com/nathatargino \uD83D\uDE03');
+}
