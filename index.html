@@ -6,30 +6,44 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <title>Página de Login</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-     <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="main.js" defer></script>
 </head>
 <body>
     <div class="main-login">
-        <div class="left-login"><h1>Bem vindo ao nosso time! <br>Faça Login agora mesmo.</h1>
-        <img class="left-login-image" src="gato-astronauta.svg" alt="Gato Astronauta Imagem">
+        <div class="left-login">
+            <h1>Pronto para a missão?<br>Faça login para decolar.</h1>
+            <img class="left-login-image" src="gato-astronauta.svg" alt="Gato Astronauta">
         </div>
         <div class="right-login">
-            <div class="card-login">
+            <form class="card-login" onsubmit="abrirModal(event)">
                 <h1>LOGIN</h1>
                 <div class="text-field">
                     <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="Usuário">
+                    <input type="text" id="usuario" name="usuario" placeholder="Usuário" required>
                 </div>
                 <div class="text-field">
                     <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha" id="senha">
-                    <span class="material-icons" id="password-visivel" onclick="mostrarSenha(this)">visibility_off</span>
-
+                    <div class="input-wrapper">
+                        <input type="password" name="senha" placeholder="Senha" id="senha" required>
+                        <span class="material-icons" id="password-visivel" onclick="mostrarSenha(this)">visibility_off</span>
+                    </div>
                 </div>        
-                 <button class="btn-login" onclick="alerta(this)"><a href="">Entrar</a></button>
-                 <p class="text-singup">Ainda não tem uma conta? <a href="singup.html">Cadastre-se</a> agora!</p>
+                <button type="submit" class="btn-login">Entrar</button>
+                <p class="text-singup">Ainda não tem uma conta? <a href="javascript:void(0)" onclick="abrirModal(event)">Cadastre-se</a> agora!</p>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-portfolio" class="modal-container">
+        <div class="modal-content">
+            <span class="close-modal" onclick="fecharModal()">&times;</span>
+            <h2>Olá! 🚀</h2>
+            <p>Obrigado por visualizar meu projeto. Confira mais do meu trabalho:</p>
+            <div class="modal-links">
+                <a href="https://nathatargino.azurewebsites.net/" target="_blank" class="modal-btn portfolio">Meu Portfólio</a>
+                <a href="https://github.com/nathatargino" target="_blank" class="modal-btn github">GitHub</a>
+                <a href="https://www.linkedin.com/in/nathatargino/" target="_blank" class="modal-btn linkedin">LinkedIn</a>
             </div>
         </div>
     </div>
